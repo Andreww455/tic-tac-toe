@@ -1,0 +1,84 @@
+{
+  "_readme": "HOW TO EDIT CATEGORIES — see bottom of this file for full instructions",
+
+  "rows": [
+    {
+      "id": "row_el_sakka",
+      "label": "أحمد السقا",
+      "emoji": "💥",
+      "type": "actor",
+      "value": "el_sakka",
+      "description": "أفلام بطولة أحمد السقا"
+    },
+    {
+      "id": "row_adel_imam",
+      "label": "عادل إمام",
+      "emoji": "🎩",
+      "type": "actor",
+      "value": "adel_imam",
+      "description": "أفلام بطولة عادل إمام"
+    },
+    {
+      "id": "row_karim",
+      "label": "كريم عبد العزيز",
+      "emoji": "⭐",
+      "type": "actor",
+      "value": "karim",
+      "description": "أفلام بطولة كريم عبد العزيز"
+    }
+  ],
+
+  "cols": [
+    {
+      "id": "col_comedy",
+      "label": "كوميديا",
+      "emoji": "😄",
+      "type": "genre",
+      "value": "comedy",
+      "description": "أفلام كوميدية"
+    },
+    {
+      "id": "col_action",
+      "label": "أكشن",
+      "emoji": "🔥",
+      "type": "genre",
+      "value": "action",
+      "description": "أفلام أكشن وإثارة"
+    },
+    {
+      "id": "col_drama",
+      "label": "دراما",
+      "emoji": "🎞",
+      "type": "genre",
+      "value": "drama",
+      "description": "أفلام دراما"
+    }
+  ],
+
+  "_instructions": {
+    "how_to_add_a_category": [
+      "1. Add a new object to 'rows' or 'cols' array.",
+      "2. Set a unique 'id' (e.g. 'row_heneidy').",
+      "3. Set 'label' (Arabic display name), 'emoji', 'description'.",
+      "4. Set 'type' to either 'actor' or 'genre'.",
+      "5. Set 'value' — must match the actor/genre key used in movies.json.",
+      "6. In movies.json, add that value to the 'actors' or 'genres' array of every relevant movie.",
+      "Example row: { 'id': 'row_heneidy', 'label': 'محمد هنيدي', 'emoji': '😂', 'type': 'actor', 'value': 'heneidy' }",
+      "Example col: { 'id': 'col_romance', 'label': 'رومانسي', 'emoji': '❤️', 'type': 'genre', 'value': 'romance' }"
+    ],
+    "how_to_add_a_movie": [
+      "1. Open movies.json.",
+      "2. Add a new object: { 'id': <nextId>, 'title': 'اسم الفيلم', 'actors': ['actor_value'], 'genres': ['genre_value'] }.",
+      "3. The 'actors' array should include the 'value' keys of matching actor categories.",
+      "4. The 'genres' array should include the 'value' keys of matching genre categories.",
+      "5. A movie can belong to multiple actors and genres.",
+      "Existing actor values: el_sakka, adel_imam, karim, heneidy, ahmed_helmy",
+      "Existing genre values: comedy, action, drama, thriller, romance, crime, adventure"
+    ],
+    "notes": [
+      "The game validates that a picked movie belongs to BOTH the row category AND the col category.",
+      "If a cell intersection is empty (no movies qualify), players won't be able to claim it — add more movies!",
+      "Keep exactly 3 rows and 3 cols for the 3x3 grid to work correctly."
+    ]
+  }
+}
